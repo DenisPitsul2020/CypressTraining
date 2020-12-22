@@ -1,0 +1,22 @@
+{
+  "name": "ang2-conduit",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod  --base-href ./ && cp CNAME dist/CNAME",
+    "test": "ng test",
+    "lint": "ng lint --force",
+    "e2e": "ng e2e",
+    "cypress": "npx cypress open"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  }
+}
