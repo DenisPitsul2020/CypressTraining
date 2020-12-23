@@ -1,4 +1,6 @@
-class DesktopsPage {
+import {BasePage} from "./BasePage";
+
+class ProductsPage extends BasePage {
 
     getTitle() {
         return cy.get('#content h2')
@@ -26,6 +28,16 @@ class DesktopsPage {
         })
     }
 
+    addToCart(productName) {
+        cy.get('.product-thumb a')
+            .contains(productName)
+            .parents('.caption')
+            .next('.button-group')
+            .find('button')
+            .contains('Add to Cart')
+            .click()
+    }
+
 }
 
-export const desktopsPage = new DesktopsPage()
+export const productsPage = new ProductsPage()

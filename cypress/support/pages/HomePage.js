@@ -1,14 +1,6 @@
-class HomePage {
+import {BasePage} from "./BasePage";
 
-    openAllDesktops() {
-        cy.get('.navbar-nav a')
-            .contains('Desktops')
-            .click()
-        cy.get('.navbar-nav')
-            .contains('Show All Desktops')
-            .should('be.visible')
-            .click()
-    }
+class HomePage extends BasePage {
 
 }
 

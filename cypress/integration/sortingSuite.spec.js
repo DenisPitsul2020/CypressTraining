@@ -1,24 +1,22 @@
 /// <reference types="cypress"/>
 
-
-
-import {desktopsPage} from "../support/pages/DesktopsPage";
+import {productsPage} from "../support/pages/ProductsPage";
 import {homePage} from "../support/pages/HomePage";
 
-describe('Login suite', () => {
+describe('Sorting item suite', () => {
 
     beforeEach(() => {
         cy.openHomePage();
     });
 
-    it('desktops should be sorted alphabetically', () => {
+    it('Desktops should be sorted alphabetically', () => {
         homePage.openAllDesktops()
 
-        desktopsPage.getTitle().should('contain', 'Desktops')
+        productsPage.getTitle().should('contain', 'Desktops')
 
-        desktopsPage.sortByPriceAscending()
+        productsPage.sortByPriceAscending()
 
-        desktopsPage.checkSortDesktopsAlphabetically()
+        productsPage.checkSortDesktopsAlphabetically()
     })
 
 })
