@@ -1,5 +1,8 @@
 {
   "mac": "iMac",
+  "macPrice": "122.00",
   "phone": "iPhone",
-  "tablet": "Samsung Galaxy Tab 10.1"
+  "phonePrice": "123.20",
+  "tablet": "Samsung Galaxy Tab 10.1",
+  "tabletPrice": "241.99"
 }
