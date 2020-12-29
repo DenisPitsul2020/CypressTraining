@@ -4,6 +4,7 @@ import {productsPage} from "../support/pages/ProductsPage";
 import {homePage} from "../support/pages/HomePage";
 import {shoppingCardPage} from "../support/pages/ShoppingCardPage";
 
+// base url should be http://opencart.abstracta.us/index.php
 describe('Shopping card suite', () => {
 
     let testData = {}

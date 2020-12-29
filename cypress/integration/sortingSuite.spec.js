@@ -3,6 +3,7 @@
 import {productsPage} from "../support/pages/ProductsPage";
 import {homePage} from "../support/pages/HomePage";
 
+// base url should be http://opencart.abstracta.us/index.php
 describe('Sorting item suite', () => {
 
     beforeEach(() => {
