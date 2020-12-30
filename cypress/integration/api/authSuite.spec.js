@@ -18,7 +18,7 @@ describe('Api auth suite', () => {
 
             cy.request({
                 method: 'POST',
-                url: '/api/v1/auth-token/token/login/',
+                url: 'https://test24.com.ua/api/v1/auth-token/token/login/',
                 body: userCredentials
             }).its('body.auth_token')
                 .as('authToken')
@@ -30,7 +30,7 @@ describe('Api auth suite', () => {
             // get user info(id, username, email)
             cy.request({
                 method: 'GET',
-                url: '/api/v1/user/',
+                url: 'https://test24.com.ua/api/v1/user/',
                 headers: {
                     Authorization: 'Token ' + authToken
                 }
@@ -48,7 +48,7 @@ describe('Api auth suite', () => {
             // get user info(id, username, email)
             cy.request({
                 method: 'GET',
-                url: '/api/v1/user/',
+                url: 'https://test24.com.ua/api/v1/user/',
                 headers: {
                     Authorization: 'Token ' + authToken
                 }
@@ -60,7 +60,7 @@ describe('Api auth suite', () => {
                 // get user detail(first name, last name, phone)
                 cy.request({
                     method: 'GET',
-                    url: `/api/v1/user/profile/${userInfoResponse.body.id}/`
+                    url: `https://test24.com.ua/api/v1/user/profile/${userInfoResponse.body.id}/`
                 }).then(userDetailResponse => {
                     expect(userDetailResponse).to.have.property('status', 200)
                     expect(userDetailResponse.body.first_name).to.equal(testData.firstName)

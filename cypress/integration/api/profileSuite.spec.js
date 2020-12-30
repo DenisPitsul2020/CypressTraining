@@ -17,7 +17,7 @@ describe('Profile api suite', () => {
 
             cy.request({
                 method: 'POST',
-                url: '/api/v1/auth-token/token/login/',
+                url: 'https://test24.com.ua/api/v1/auth-token/token/login/',
                 body: userCredentials
             }).its('body.auth_token')
                 .as('authToken')
@@ -29,7 +29,7 @@ describe('Profile api suite', () => {
         cy.get('@authToken').then(authToken => {
             cy.request({
                 method: 'GET',
-                url: '/api/v1/user/',
+                url: 'https://test24.com.ua/api/v1/user/',
                 headers: {
                     Authorization: 'Token ' + authToken
                 }
@@ -41,7 +41,7 @@ describe('Profile api suite', () => {
                     headers: {
                         Authorization: 'Token ' + authToken
                     },
-                    url: `/api/v1/user/profile/${response.body.id}/`,
+                    url: `https://test24.com.ua/api/v1/user/profile/${response.body.id}/`,
                     body: {
                         first_name: testData.newFirstName,
                         last_name: testData.newLastName,

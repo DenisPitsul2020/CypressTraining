@@ -19,7 +19,7 @@ describe('Registration api suite', () => {
         // register user with email, username and password
         cy.request({
             method: "POST",
-            url: "/api/v1/auth/users/",
+            url: "https://test24.com.ua/api/v1/auth/users/",
             body: userCredentials
         }).then(response => {
             expect(response.status).to.equal(201)
@@ -39,7 +39,7 @@ describe('Registration api suite', () => {
             // try to register user with existing email and username
             cy.request({
                 method: "POST",
-                url: "/api/v1/auth/users/",
+                url: "https://test24.com.ua/api/v1/auth/users/",
                 body: userCredentials,
                 failOnStatusCode: false,
             }).then(response => {
